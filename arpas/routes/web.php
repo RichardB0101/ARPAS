@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RouteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +21,14 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/wykladowca', [RouteController::class, 'index']);
+Route::get('/ocena-prac', [RouteController::class, 'viewOcenianiePrac']);
+
 
 require __DIR__.'/auth.php';
