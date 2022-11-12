@@ -114,6 +114,10 @@
       <path value="$PROJECT_DIR$/arpas/vendor/laravel/breeze" />
       <path value="$PROJECT_DIR$/arpas/vendor/inertiajs/inertia-laravel" />
       <path value="$PROJECT_DIR$/arpas/vendor/tightenco/ziggy" />
+      <path value="$PROJECT_DIR$/arpas/vendor/laravel/pint" />
+      <path value="$PROJECT_DIR$/arpas/vendor/nunomaduro/termwind" />
+      <path value="$PROJECT_DIR$/arpas/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/arpas/vendor/maximebf/debugbar" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />

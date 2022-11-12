@@ -120,6 +120,10 @@
       <excludeFolder url="file://$MODULE_DIR$/arpas/vendor/laravel/breeze" />
       <excludeFolder url="file://$MODULE_DIR$/arpas/vendor/inertiajs/inertia-laravel" />
       <excludeFolder url="file://$MODULE_DIR$/arpas/vendor/tightenco/ziggy" />
+      <excludeFolder url="file://$MODULE_DIR$/arpas/vendor/laravel/pint" />
+      <excludeFolder url="file://$MODULE_DIR$/arpas/vendor/nunomaduro/termwind" />
+      <excludeFolder url="file://$MODULE_DIR$/arpas/vendor/barryvdh/laravel-debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/arpas/vendor/maximebf/debugbar" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

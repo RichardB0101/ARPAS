@@ -22,21 +22,7 @@
     </nav>
 </header>
 
-<div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-    @if (Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-            @auth
-                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-            @else
-                <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                @endif
-            @endauth
-        </div>
-    @endif
-</div>
 
 
 
@@ -44,17 +30,18 @@
     <div class="" style="margin-top:50px ">
         <div class="rounded d-flex justify-content-center">
             <div class="col-md-4 col-sm-12 shadow-lg p-3 bg-light">
-                <form action="">
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
                     <div class="p-4">
                         <div class="input-group mb-3">
                                     <span class="input-group-text bg-primary"><i
                                             class="bi bi-person-plus-fill text-white"></i></span>
-                            <input type="text" class="form-control" placeholder="Nazwa użytkownika/PESEL">
+                            <input type="email" name="email" class="form-control" placeholder="Nazwa użytkownika/PESEL">
                         </div>
                         <div class="input-group mb-3">
                                     <span class="input-group-text bg-primary"><i
                                             class="bi bi-key-fill text-white"></i></span>
-                            <input type="password" class="form-control" placeholder="Hasło">
+                            <input type="password" name="password" class="form-control" placeholder="Hasło">
                         </div>
                         <div class="container bg-light">
                             <div class="col-md-12 text-center">

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Assignment;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RouteController;
 
@@ -24,11 +25,21 @@ Route::get('/dashboard', function () {
 
 
 Route::get('/home', function () {
-    return view('home');
+    return view('home')->name('home');
 });
 
-Route::get('/wykladowca', [RouteController::class, 'index']);
-Route::get('/ocena-prac', [RouteController::class, 'viewOcenianiePrac']);
 
+//Arpas stronki
+Route::middleware(['auth'])->group(function () {
+    Route::get('/wykladowca', [RouteController::class, 'index'])->name('wykladowca.katalog_prac');
+    Route::get('/ocena-prac', [RouteController::class, 'viewOcenianiePrac'])->name('wykladowca.ocena_prac');;
+});
+
+Route::get('/prace/{prace}', function (Assignment $prace){
+    return view('demo', [compact('prace')]);
+})->name('praca');
 
 require __DIR__.'/auth.php';
+
+
+

@@ -16,14 +16,16 @@
 <body class="d-flex flex-column h-100">
 <header class="bg-primary text-center text-lg-start shadow">
     <!-- Image -->
-    <nav class="d-flex flex-row justify-content-end py-3">
-        <button type="button" class="btn btn-primary" style="">Strona domowa</button>
-        <button type="button" class="btn btn-primary" style="">Katalog prac</button>
-        <button type="button" class="btn btn-primary" style="">Ocena prac</button>
-        <button type="button" class="btn btn-primary" style="">Profil</button>
+    <nav class="d-flex flex-row justify-content-end py-3 align-items-start mx-5">
+        <a class="btn btn-primary" href="{{ route('dashboard') }}" style="">Strona domowa</a>
+        <a class="btn btn-primary" href="{{ route('wykladowca.katalog_prac') }}" style="">Katalog prac</a>
+        <a class="btn btn-primary" href="{{ route('wykladowca.ocena_prac') }}" style="">Ocena prac</a>
         <button type="button" class="btn btn-primary" style="">Ustawienia</button>
-        <button type="button" class="btn btn-danger" style="">Wylogować się</button>
-        <a class="navbar-brand" href="#">
+        <a class="btn btn-primary" href="#" style="">{{ Auth::user()->name }}</a>
+        <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button class="btn btn-danger" type="submit">Wylogować się</button>
+        </form>
         </a>
     </nav>
 
